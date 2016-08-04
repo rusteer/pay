@@ -1,0 +1,5 @@
+{
+	"mainActivity": "com.bbgames.cs.MainActivity",
+	"mainApplication": "com.bbgames.cs.MainApplication",
+	"screenOrientation": "landscape"
+}

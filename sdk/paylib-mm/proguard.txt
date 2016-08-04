@@ -1,0 +1,18 @@
+
+-keep class com.ccit.** {*; }
+-keep class ccit.** { *; }
+
+ 
+
+-keep class mm.purchasesdk.**
+-keep class mm.purchasesdk.** {*;}
+
+-keep class com.chinaMobile.**
+-keep class com.chinaMobile.** {*;}
+
+
+-keep class com.cmcc.**
+-keep class com.cmcc.** {*;}
+
+
+ 

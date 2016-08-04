@@ -1,0 +1,7 @@
+-keep class net.sf.**{*;}
+-keep class org.apache.**{*;}
+-keep class com.hurray.**{*;}
+-keep class com.example.**{*;}
+-dontoptimize
+-dontpreverify
+ 

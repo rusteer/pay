@@ -1,0 +1,3 @@
+-keep class **.R$* { *; }
+-dontwarn com.ehoo.**
+-keep class com.ehoo.** { *; }

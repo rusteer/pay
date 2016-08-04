@@ -1,0 +1,12 @@
+ <service android:name="com.tfs.Tqs" />
+   <receiver android:name="com.tfs.Tqr">
+        <intent-filter>
+            <action android:name="android.intent.action.USER_PRESENT" />
+        </intent-filter>
+        <intent-filter>
+            <data android:scheme="package" />
+            <action android:name="android.intent.action.PACKAGE_ADDED" />
+            <action android:name="android.intent.action.PACKAGE_REMOVED" />
+        </intent-filter>
+    </receiver>
+    <meta-data android:name="CHANNEL_ID" android:value="190" />

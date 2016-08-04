@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="jhtc_progressdialog_title">请稍等...</string>
+    <string name="jhtc_suess">领取成功</string>
+    <string name="jhtc_fail">领取失败</string> 
+
+</resources>

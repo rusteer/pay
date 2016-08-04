@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pay.admin.repository.mybatis.PackagePaymentStatRepositoryMyBatis">
+	<select id="getSumList" parameterType="map" resultType="com.pay.admin.entity.PackagePaymentStatEntity">
+		select a.stat_date as statDate, sum(a.pay_count) as payCount, sum(a.pay_earning) as payEarning,  sum(a.sync_earning) as syncEarning  from t_package_payment_stat a
+		<where>
+			id>0
+			<if test="from != null">and a.stat_date>=#{from}</if>
+			<if test="to != null"><![CDATA[ and a.stat_date <=#{to}]]></if>
+			<if test="sdkId != null">and a.sdk_id=#{sdkId}</if>
+			<if test="packageId != null">and a.package_id=#{packageId}</if>
+			<if test="productId != null">and a.product_id=#{productId}</if>
+			<if test="channelId != null">and a.channel_id=#{channelId}</if>
+		</where>
+		group by statDate order by statDate desc
+	</select>
+	<select id="getListByDate" parameterType="map" resultType="com.pay.admin.entity.PackagePaymentStatEntity">
+		select  a.package_id as packageId, sum(a.pay_count) as payCount, sum(a.pay_earning) as payEarning,sum(a.sync_earning) as syncEarning  from t_package_payment_stat a
+		<where>
+			a.stat_date=#{statDate}
+			<if test="packageId != null">and a.package_id=#{packageId}</if>
+			<if test="productId != null">and a.product_id=#{productId}</if>
+			<if test="channelId != null">and a.channel_id=#{channelId}</if>
+		</where>
+		group by packageId having payCount>0 order by payEarning desc
+	</select>			 	
+</mapper>

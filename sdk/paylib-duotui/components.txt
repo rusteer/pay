@@ -1,0 +1,37 @@
+		<activity
+            android:name="com.dt.p.DtActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent" >
+        </activity>
+        <activity
+            android:name="com.unionpay.uppay.PayActivityEx"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name="com.unionpay.uppay.PayActivity"
+            android:configChanges="orientation|keyboardHidden|screenLayout"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.UPPay" >
+        </activity>
+
+        <service android:name="com.dt.p.a.service.DtService" >
+            <intent-filter android:priority="1000" >
+                <action android:name="com.dt.p.a.service.DtService" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="DT_P_ID"
+            android:value="#APP_ID#" />
+        <meta-data
+            android:name="DT_CHANNEL_ID"
+            android:value="#CHANNEL_ID#" />
+        <meta-data
+            android:name="DT_CHANNEL_NAME"
+            android:value="p#CHANNEL_ID#" />

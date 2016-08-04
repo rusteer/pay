@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.testhurray2"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <application>
+        <activity
+            android:name="com.example.hurray2pay.ZhiFuActivity"
+            android:label="@string/hurray_title_activity_zhi_fu"
+            android:theme="@style/hurray_Transparent" >
+        </activity>
+        <activity
+            android:name="com.example.hurray2pay.InvokeActivity"
+            android:theme="@style/hurray_Transparent" >
+        </activity>
+    </application>
+
+</manifest>

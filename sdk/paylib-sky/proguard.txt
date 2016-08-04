@@ -1,0 +1,3 @@
+-keep class * implements java.io.Serializable
+-keep class com.skymobi.pay.**{*;}
+-keep public class com.skymobi.payment.android.model.*.*{*;}

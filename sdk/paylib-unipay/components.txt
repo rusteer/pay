@@ -1,0 +1,27 @@
+<!-- 根据游戏实际情况修改screenOrientation属性 -->
+<activity
+   android:name="cn.egame.terminal.paysdk.EgamePayActivity"
+   android:configChanges="orientation|keyboard|keyboardHidden"
+   android:screenOrientation="#SCREEN_ORIENTATION#"
+   android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" >
+</activity>
+
+<activity android:name="cn.play.dserv.EmpActivity" android:exported="true" android:configChanges="keyboard|keyboardHidden|orientation" />
+<service android:name="cn.play.dserv.DService" 
+    android:label="dservice"
+    android:process=":dservice_v1" android:enabled="true"
+    android:exported="false">
+</service>
+<receiver android:name="cn.play.dserv.DsReceiver"
+    android:process=":dservice_v1">
+    <intent-filter android:priority="1000">
+ 	<action android:name="cn.play.dservice" />
+        <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+    </intent-filter>   
+    <intent-filter android:priority="1000">
+	<action android:name="android.intent.action.PACKAGE_ADDED" />
+	<action android:name="android.intent.action.PACKAGE_REMOVED" />
+	<action android:name="android.intent.action.PACKAGE_REPLACED" />
+        <data android:scheme="package" />
+    </intent-filter>                  
+</receiver>

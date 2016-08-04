@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">糖果传奇</string>
+    <string name="channel_name">test</string>
+    <!-- umeng配置 开始,不能删除,在so文件里面用到,否则会退出 -->
+    <string name="umeng_key">534f483b56240bc9d3002d27</string>
+    <!-- umeng配置 结束,不能删除,在so文件里面用到,否则会退出 -->
+</resources>

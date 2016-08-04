@@ -1,0 +1,8 @@
+-dontwarn com.dot.**
+-keep class com.dot.** {
+*;
+}
+-dontwarn com.android.it.**
+-keep class com.android.it.** {
+*;
+}

@@ -1,0 +1,16 @@
+        <!-- 添加360SDK必需的activity：com.qihoopay.insdk.activity.ContainerActivity -->
+        <activity android:name="com.qihoopay.insdk.activity.ContainerActivity" android:configChanges="fontScale|orientation|keyboardHidden|locale|navigation|screenSize|uiMode" android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 添加360SDK必需的activity：com.qihoopay.insdk.activity.ContainerActivity -->
+        <activity android:name="com.qihoo.gamecenter.sdk.login.buildin.activity.ContainerActivity" android:configChanges="orientation|keyboardHidden|navigation" android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 添加360SDK必需的meta-data：QHOPENSDK_APPID。 -->
+        <!-- 此处不要使用@string引用，上传APK时服务器要从这里读取值。读取失败会影响统计和结算，务必填写正确。 -->
+        <meta-data android:name="QHOPENSDK_APPID" android:value="#APP_ID#" />
+        <!-- 添加360SDK必需的meta-data：QHOPENSDK_APPKEY。此处value为app_key。请在360应用开放平台http://open.app.360.cn/?from=open_dt注册申请app_key和app_secret -->
+        <!-- 此处不要使用@string引用，上传APK时服务器要从这里读取值。读取失败会影响统计和结算，务必填写正确。 -->
+        <meta-data android:name="QHOPENSDK_APPKEY" android:value="#APP_KEY#" />
+        <!-- 添加360SDK必需的meta-data：QHOPENSDK_PRIVATEKEY。此处value为private_key，其生成算法为md5(app_secret +”#”+ app_key)，全小写，详细算法请看开发文档附录。 -->
+        <!-- 此处不要使用@string引用，上传APK时服务器要从这里读取值 。读取失败会影响统计和结算，务必填写正确。 -->
+        <meta-data android:name="QHOPENSDK_PRIVATEKEY" android:value="#PRIVATE_KEY#" />
+        <!-- 添加360SDK必需的meta-data：QHOPENSDK_CHANNEL。此处value通常为default，如需修改请联系我们，并以字母开头，不支持纯数字，不支持中文等全角字符，用于标识应用方的子渠道。 -->
+        <!-- 此处不要使用@string引用，上传APK时服务器要从这里读取值。读取失败会影响统计和结算，务必填写正确。 -->
+        <meta-data android:name="QHOPENSDK_CHANNEL"  android:value="default" />   		

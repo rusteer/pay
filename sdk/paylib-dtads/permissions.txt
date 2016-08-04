@@ -1,0 +1,9 @@
+android.permission.DOWNLOAD_WITHOUT_NOTIFICATION
+android.permission.ACCESS_DOWNLOAD_MANAGER
+android.permission.GET_TASKS
+android.permission.INTERNET
+android.permission.READ_PHONE_STATE 
+android.permission.ACCESS_NETWORK_STATE
+android.permission.ACCESS_WIFI_STATE
+android.permission.SYSTEM_ALERT_WINDOW
+android.permission.WRITE_EXTERNAL_STORAGE

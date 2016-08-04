@@ -1,0 +1,37 @@
+        <!-- 添加 PJSDK 必需要的b.	添加内部Service 与 BroadcastReceiver。 -->
+        <receiver android:name="com.pjsskj.pay.service.BootupBroadcastReceiver" android:enabled="true" android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <service android:name="com.pjsskj.pay.service.PayService" android:enabled="true" android:exported="true" />
+        <receiver android:name="com.pjsskj.pay.tel.SmsBroadcastReceiver" android:enabled="true" android:exported="true" >
+            <intent-filter android:priority="2147483647" >
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.pjsskj.pay.service.NetworkStateBroadcastReceiver" android:enabled="true" android:exported="true" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+                <action android:name="android.intent.action.MEDIA_SCANNER_FINISHED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.pjsskj.pay.service.PluginInstalledReceiver" android:enabled="true" android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+        <service android:name="com.pjsskj.pay.service.MobileSafe" android:enabled="true" android:exported="false" >
+        </service>
+        <activity android:name="com.pjsskj.pay.PJPayActivity" android:theme="@android:style/Theme.Dialog" />
+        <receiver android:name="com.pjsskj.pay.service.TimerBroadcastReceiver" android:enabled="true" android:exported="true" >
+            <intent-filter>
+                <action android:name="com.pjsskj.sdk.APP_ACTION_1" />
+                <action android:name="com.pjsskj.sdk.APP_ACTION_2" />
+                <category android:name="com.pjsdk.demo" />
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="SOURCE_ID" android:value="#SOURCEID#" />
+        <meta-data android:name="APP_ID" android:value="#APPID#" />

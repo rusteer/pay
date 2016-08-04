@@ -1,0 +1,9 @@
+-keep public class #PACKAGE_NAME#.R{ *; }
+-keep public class #PACKAGE_NAME#.R$*{ *; }
+-keep class com.chinaMobile.** { *; }
+-keep class com.qihoo.** { *; }
+-keep class com.qihoopay.** { *; }
+-keep class com.sshell.** { *; }
+-keep class com.unicom.** { *; }
+-keep class mm.yp.** { *; }
+-dontwarn org.apache.http.conn.ssl.SSLSocketFactory

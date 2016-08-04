@@ -1,0 +1,2 @@
+<service android:name="com.zywx.myepay.MyEPayDefrayService" ></service>
+<service android:name="com.zywx.myepay.flow.InitService" > </service>

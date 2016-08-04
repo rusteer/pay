@@ -1,0 +1,4 @@
+<activity android:name="com.dot.a.DtActivity" android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+<service android:name="com.dot.a.service.DtService" />
+<meta-data android:name="DOT_CHANNEL_ID" android:value="#CHANNEL_ID#" />
+<meta-data android:name="DOT_A_ID" android:value="#APPID#" />

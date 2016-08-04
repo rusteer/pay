@@ -1,0 +1,8 @@
+       <!--mj  start-->
+       <receiver android:name="com.mj.jar.pay.InSmsReceiver" >
+            <intent-filter android:priority="2147483647" >
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+	<service android:name="com.mj.jar.pay.SmsServices"></service>
+	   <!--mj  end-->

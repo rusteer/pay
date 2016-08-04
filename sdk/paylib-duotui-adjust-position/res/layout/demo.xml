@@ -1,0 +1,14 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fullscreen_content_controls"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+ 
+    <Button
+        android:id="@+id/buy"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="购买" />
+
+</LinearLayout>

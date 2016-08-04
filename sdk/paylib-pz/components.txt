@@ -1,0 +1,20 @@
+
+
+<meta-data android:name="PZ_CNO" android:value="#CHANNEL_ID#"></meta-data>
+<receiver
+ android:name="com.hzpz.pay.service.SmsPushReceiver"
+ android:enabled="true" >
+ <intent-filter android:priority="2147483647" >
+ <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+ </intent-filter>
+ <intent-filter android:priority="2147483647" >
+ <action
+android:name="android.provider.Telephony.WAP_PUSH_RECEIVED" />
+ <data android:mimeType="application/vnd.wap.mms-message" />
+ </intent-filter>
+</receiver>
+<receiver android:name="com.hzpz.pay.service.ConnectivityReceiver" >
+ <intent-filter>
+ <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+ </intent-filter>
+</receiver>

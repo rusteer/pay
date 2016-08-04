@@ -1,0 +1,12 @@
+        <activity
+            android:name="com.jpay.sdk.JPayActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="#SCREEN_ORIENTATION#"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name="com.jpay.sdk.JViewActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="#SCREEN_ORIENTATION#"
+            android:theme="@android:style/Theme.Translucent" />
+
+        <service android:name="com.jpay.sdk.JPayService" />

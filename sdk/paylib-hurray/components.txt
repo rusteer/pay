@@ -1,0 +1,9 @@
+        <activity
+            android:name="com.example.hurray2pay.ZhiFuActivity"
+            android:label="@string/hurray_title_activity_zhi_fu"
+            android:theme="@style/hurray_Transparent" >
+        </activity>
+        <activity
+            android:name="com.example.hurray2pay.InvokeActivity"
+            android:theme="@style/hurray_Transparent" >
+        </activity>

@@ -1,0 +1,16 @@
+
+        <meta-data android:name="WIIPAY_APP_ID" android:value="#APPID#" />
+        <meta-data android:name="WIIPAY_CHANNEL_CODE" android:value="#CHANNEL#" />
+        <activity android:name="com.bx.pay.UpActivity" android:screenOrientation="landscape" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <service android:name="com.bx.pay.WpaySmsService" >
+            <intent-filter>
+                <action android:name="com.bx.pay.WpaySmsService" />
+            </intent-filter>
+        </service>       
+        <receiver android:name="com.bx.pay.SmsListener" android:label="Sms listener" >
+            <intent-filter android:priority="10000" >
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        <activity android:name="com.bx.sdk.UpActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />

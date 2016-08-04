@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<color name="jhtc_white">#FFFFFF</color><!--白色 --> 
+<color name="jhtc_black">#000000</color><!--黑色 --> 
+    <color name="jhtc_huyan">#2b481c</color>
+    <color name="jhtc_tipscolor">#B4B3AC</color>
+    <color name="jhtc_mywhite">#DCDCDC</color>
+    <color name="jhtc_number">#FF5809</color>
+    <color name="jhtc_paytitle">#2894FF</color>
+</resources>

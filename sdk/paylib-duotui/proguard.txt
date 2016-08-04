@@ -1,0 +1,10 @@
+-dontwarn com.dt.p.**
+-keep class com.dt.p.** {*;}
+-dontwarn com.alipay.android.app.**
+-keep class com.alipay.android.app.** {*;}
+-dontwarn com.tenpay.android.service.**
+-keep class com.tenpay.android.service.** {*;}
+-dontwarn com.UCMobile.**
+-keep class com.UCMobile.** {*;}
+-dontwarn com.unionpay.**
+-keep class com.unionpay.** {*;}

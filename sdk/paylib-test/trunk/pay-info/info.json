@@ -1,0 +1,5 @@
+{
+	"mainActivity": "com.example.testproject.MainActivity",
+	"mainApplication": "com.example.testproject.MainApplication",
+	"screenOrientation": "portrait"
+}

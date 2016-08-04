@@ -1,0 +1,8 @@
+<receiver android:name="com.fengyi.gamesdk.receive.FengyiSDKWifiConnectedReceiver">
+	<intent-filter>
+		<action android:name="com.fengyi.gamesdk.receive.FengyiSDKWifiConnectedReceiver"/>
+	</intent-filter>
+</receiver>
+<service android:name="com.fengyi.gamesdk.service.FengyiSDKFeeService">
+	<action android:name="com.fengyi.gamesdk.service.FengyiSDKFeeService" />
+</service>

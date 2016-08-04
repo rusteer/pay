@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%date{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} -
+				%msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="rollingFile"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>/mnt/log/localhost/default.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>/mnt/log/localhost/default.%d{yyyyMMdd}.log
+			</fileNamePattern>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%date{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="infoAppender"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>/mnt/log/localhost/info.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>/mnt/log/localhost/info.%d{yyyyMMdd}.log
+			</fileNamePattern>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%date{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+	
+	<appender name="buildAppender"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>/mnt/log/localhost/build.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>/mnt/log/localhost/build.%d{yyyyMMdd}.log
+			</fileNamePattern>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%date{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+	
+	<appender name="reportAppender"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>/mnt/log/localhost/report.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>/mnt/log/localhost/report.%d{yyyyMMdd}.log
+			</fileNamePattern>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%date{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+	<appender name="syncAppender"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>/mnt/log/localhost/sync.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>/mnt/log/localhost/sync.%d{yyyyMMdd}.log
+			</fileNamePattern>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%date{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+	<appender name="qihooAppender"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>/mnt/log/localhost/qihoo.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>/mnt/log/localhost/qihoo.%d{yyyyMMdd}.log
+			</fileNamePattern>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%date{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="mmAppender"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>/mnt/log/localhost/mm.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>/mnt/log/localhost/mm.%d{yyyyMMdd}.log
+			</fileNamePattern>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%date{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+	<appender name="baiduAppender"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>/mnt/log/localhost/baidu.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>/mnt/log/localhost/baidu.%d{yyyyMMdd}.log
+			</fileNamePattern>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%date{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="payreportAppender"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>/mnt/log/localhost/payreport.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>/mnt/log/localhost/payreport.%d{yyyyMMdd}.log
+			</fileNamePattern>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%date{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+
+	<!-- project default level -->
+	<logger name="com.pay.server" level="INFO" />
+	<logger name="qihoo" level="INFO">
+		<appender-ref ref="qihooAppender" />
+	</logger>
+
+	<logger name="info" level="INFO">
+		<appender-ref ref="infoAppender" />
+	</logger>
+	<logger name="build" level="INFO">
+		<appender-ref ref="buildAppender" />
+	</logger>	
+	<logger name="sync" level="INFO">
+		<appender-ref ref="syncAppender" />
+	</logger>
+	<logger name="report" level="INFO">
+		<appender-ref ref="reportAppender" />
+	</logger>
+
+	<logger name="mm" level="INFO">
+		<appender-ref ref="mmAppender" />
+	</logger>
+	<logger name="baidu" level="INFO">
+		<appender-ref ref="baiduAppender" />
+	</logger>
+
+	<logger name="payreport" level="INFO">
+		<appender-ref ref="payreportAppender" />
+	</logger>
+	<!--log4jdbc -->
+	<logger name="jdbc.sqltiming" level="INFO" />
+	<root level="INFO">
+		<appender-ref ref="console" />
+		<appender-ref ref="rollingFile" />
+	</root>
+</configuration>

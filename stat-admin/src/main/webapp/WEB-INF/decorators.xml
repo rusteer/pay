@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<decorators defaultdir="/jsp/layouts/">
+    <excludes>
+        <pattern>/static/*</pattern>
+        <pattern>/api/*</pattern>
+        <pattern>/account/*</pattern>
+        <pattern>/favicon.ico</pattern>
+    </excludes>
+
+    <decorator name="admin" page="admin/default.jsp">
+        <pattern>/admin/*</pattern>
+    </decorator>
+    <decorator name="channel" page="channel/default.jsp">
+        <pattern>/channel/report/*</pattern>
+    </decorator> 
+    <decorator name="package" page="package/default.jsp">
+        <pattern>/package/report/*</pattern>
+    </decorator>        
+</decorators>

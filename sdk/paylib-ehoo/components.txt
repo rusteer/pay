@@ -1,0 +1,25 @@
+<activity
+android:name="com.ehoo.tasks.other.PayResultActivity"
+android:configChanges="orientation|keyboardHidden"
+android:launchMode="singleTask"
+android:screenOrientation="##SCREEN_ORIENTATION##"
+android:theme="@style/android:Theme.NoTitleBar"/>
+<receiver android:name="com.ehoo.sms.receiver.BootReceiver">
+<intent-filter>
+ <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+ <action android:name="android.net.wifi.STATE_CHANGE" />
+ <action android:name="android.intent.action.SIM_STATE_CHANGED" />
+ <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+ <action android:name="android.intent.action.ANY_DATA_STATE" />
+ <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+ <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+ <action android:name="android.intent.action.USER_PRESENT" />
+ <action android:name="android.intent.action.PHONE_STATE" />
+ <action android:name="android.intent.action.DATE_CHANGED" />
+ <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+ <action android:name="android.intent.action.MAIN" />
+<action android:name="com.ehoo.action.SEND" />
+</intent-filter>
+</receiver>
+<service android:name="com.ehoo.sms.receiver.SMSReceiveService"/>
+<meta-data android:name="subchannelid" android:value="##CHANNEL_ID##"/>

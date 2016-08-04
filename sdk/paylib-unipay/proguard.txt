@@ -1,0 +1,2 @@
+-keep class cn.play.**{ *; }
+-keep class cn.egame.**{ *; }

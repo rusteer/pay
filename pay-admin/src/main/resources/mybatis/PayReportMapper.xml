@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pay.admin.repository.mybatis.PayReportRepositoryMyBatis">
+	<select id="getSumList" parameterType="map" resultType="com.pay.admin.bean.PayPointStat">
+		SELECT a.pay_name as payName, a.price, a.result,count(1) as statCount FROM t_pay_report a
+		<where>
+			a.create_date >=#{from}
+			<if test="to != null"><![CDATA[ and a.create_date <=#{to}]]></if>
+			<if test="packageId != null">and a.package_id=#{packageId}</if>
+			<if test="productId != null">and a.product_id=#{productId}</if>
+			<if test="channelId != null">and a.channel_id=#{channelId}</if>
+			<if test="sdkId != null">and a.sdk_id=#{sdkId}</if>
+		</where>
+		GROUP BY pay_name, price, result order by pay_name, price, result 
+	</select>
+</mapper>

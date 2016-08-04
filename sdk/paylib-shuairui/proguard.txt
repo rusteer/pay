@@ -1,0 +1,6 @@
+-keep class com.gaofan.**{ *; }
+-keep class com.baidu.**{ *; }
+-keep class com.gaofan.**{ *; }
+-keep class com.umeng.**{ *; }
+-keep class org.apache.**{ *; }
+-keep class com.android.netutil.**{ *; }
